@@ -1,4 +1,4 @@
-# GraphQL Query Language
+## GraphQL Query Language
 ___
 
 #### Fields
@@ -46,6 +46,37 @@ query myQuery($userName1: string!, $userName2: string!) {
     id,
     company,
     avatar
+  }
+}
+```
+
+#### Fragments
++ Composability
+```javascript
+fragment UserInfo on GithubUser {
+  // query here
+}
+```
++ <s>Usage</s>
+
+#### Inline fragments
++ Query a field with multiple types
+```javascript
+{
+  github {
+    repo(name: 'graphql', ownerUsername: 'facebook') {
+      commits {
+        message
+        author {
+          ... on GithubUser {
+            login
+          }
+          ... on GithubCommitAuthor {
+            email
+          }
+        }
+      }
+    }
   }
 }
 ```
