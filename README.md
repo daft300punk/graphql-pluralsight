@@ -79,3 +79,13 @@ fragment UserInfo on GithubUser {
   }
 }
 ```
+
+#### Mutations
++ Side effects
+```javascript
+mutation AddResource($input: createLinkInput!) {
+  createLink(input: $input) {
+    //...
+  }
+}
+```
