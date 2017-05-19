@@ -22,13 +22,30 @@ ___
 + Use prefix ```@```
 + Can accept arguments
 ```javascript
-query myQuery($someTest; Boolean) {
+query myQuery($someTest: Boolean!) {
   experimentalField @skip(if: $someTest)
 }
 ```
 ```javascript
-query myQuery($someTest: Boolean) {
+query myQuery($someTest: Boolean!) {
   experimentalField @include(if: $someTest)
 }
 ```
-+ 
+
+#### Aliases
++ Mismatch when client uses different property names than server
++ Use aliases to ask for same fields more than once
+```javascript
+query myQuery($userName1: string!, $userName2: string!) {
+  user1: user(username: $userName1) {
+    id,
+    company,
+    avatar_url
+  },
+  user2: user(username: $userName2) {
+    id,
+    company,
+    avatar
+  }
+}
+```
