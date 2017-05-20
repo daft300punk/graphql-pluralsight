@@ -1,0 +1,23 @@
+{
+  "name": "graphql-pluralsight",
+  "version": "1.0.0",
+  "description": "+ Queries can be given names.\r + Modeled after functions. Query can accept arguments.\r + Fields: Scalar vs Complex.\r + Resolver functions determine the return value of a field in query.\r + The innermost level should be a scalar field.\r + Specify types for fields and arguments\r + <s>GraphQLList</s>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daft300punk/graphql-pluralsight.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daft300punk/graphql-pluralsight/issues"
+  },
+  "homepage": "https://github.com/daft300punk/graphql-pluralsight#readme",
+  "dependencies": {
+    "mongodb": "^2.1.18",
+    "pg": "^6.0.1"
+  }
+}
