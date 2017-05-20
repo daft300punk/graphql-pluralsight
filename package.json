@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/daft300punk/graphql-pluralsight#readme",
   "dependencies": {
+    "graphql": "^0.9.6",
     "mongodb": "^2.1.18",
     "pg": "^6.0.1"
   }
