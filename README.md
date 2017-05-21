@@ -89,3 +89,23 @@ mutation AddResource($input: createLinkInput!) {
   }
 }
 ```
+
+#### Hello World
++ Define a schema first
+```javascript
+  const RootQueryType = new GraphQLObjectType({
+    name: 'RootQueryType', // any unique name
+    // all fields defined here are available on top level query scope
+    fields: {
+      hello: {
+        type: GraphQLString,
+        resolve: () => 'world'
+      }
+    }
+  });
+
+  const ncSchema = new GraphQLSchema({
+    query: RootQueryType // defined above
+    //mutation: ''
+  });
+```
