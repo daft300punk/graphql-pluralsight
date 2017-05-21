@@ -109,3 +109,14 @@ mutation AddResource($input: createLinkInput!) {
     //mutation: ''
   });
 ```
+
+#### express-graphql
++ Configuring graphql on an express server
+```javascript
+  const graphQLHTTP = require('express-graphql');
+
+  app.use('/graphql', graphQLHTTP({
+    schema: ncSchema,
+    graphiql: true
+  }))
+```
